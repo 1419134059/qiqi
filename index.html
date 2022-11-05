@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta name="generator" content="Hugo 0.58.2">
+  <meta charset="utf-8">
+      <link href="css/monokai.min.css" rel="stylesheet">
+    <script src="js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <title>我在人间贩卖黄昏</title>
+
+  
+  <meta name="baidu-site-verification" content="SQ5Gg5sRhQ">
+ 
+<script async src="js/geta.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176423370-1');
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+    function CreatePostNavigator(){
+        
+        var navigatorTitleDiv = '<div id="navigatorTitleDiv">隐藏目录</div>';
+    
+        
+        var navigatorDivContent = '<div id="navigatorDiv">';
+        
+        if($("#cnblogs_post_body :header").length == 0){
+            return;
+        }
+    
+        $.each($("#cnblogs_post_body :header"), function(i, val){      
+              
+              var headerTagName = $(val)[0].tagName.toLowerCase();
+              var navigatorItem = '<dt class="dt_'+headerTagName+'"><a href="#_nav_' + i + '">' + $(val).text() + '</a></dt>';
+              
+              navigatorDivContent += navigatorItem;
+              
+              
+              var headerLabel = '<a name="_nav_' + i + '" style="padding:0px"></a>';
+              $(val).prepend(headerLabel);
+          }); 
+          
+         navigatorDivContent += '</div>';
+        
+         $('#cnblogs_post_body').append(navigatorDivContent);
+         $('#cnblogs_post_body').append(navigatorTitleDiv);
+         
+         
+         $("#navigatorTitleDiv").click(function(){
+                $("#navigatorDiv").toggle(200, function(){
+                    var title = $("#navigatorTitleDiv").text() == "隐藏目录"?"文章目录":"隐藏目录";
+                    $("#navigatorTitleDiv").text(title);
+                });
+         });
+         
+         
+         var headerList = ["h1", "h2", "h3", "h4"];
+         var headerListLen = headerList.length;
+         
+         for(var i = 0; i < headerListLen; i++){
+                if(i < (headerListLen-1) && $(".dt_"+headerList[i]).length > 0){
+                    for(var j=headerListLen-1; j > i; j--)
+                    $(".dt_"+headerList[j]).css({"margin-left": (i+1)*10+"px"});
+                 }
+         }
+         
+    }
+    
+    CreatePostNavigator();
+</script>
+
+<style>
+#navigatorTitleDiv
+{
+    padding: 3px;
+    position: fixed;
+    top:244px; 
+    right:304px;
+    font-weight:bold;
+    cursor:pointer;
+    background-color: antiquewhite;
+}
+
+#navigatorDiv 
+{
+    border-style:double;
+    padding: 10px;
+    padding-top:30px;
+    position: fixed;
+    top:240px; 
+    right:300px;
+    background-color: antiquewhite;
+}
+</style>
+
+  
+  <meta property="og:title" content="依晨">
+  
+  <meta property="og:type" content="website">
+  <meta name="keywords" content="个人网站">
+  <script>
+
+      "color: #fff; padding: 5px 0; background: #29c75f; margin: 1em 0;",
+      "display: block;margin-left: 0.5em; margin: 1em 0;",
+      "color:#E24432; font-size: 16px; margin: 1em 0;",
+      "color:#666666; font-size: 16px; margin: 1em 0;",
+      "color:#0E70ED; font-size: 16px; margin: 1em 0;",
+      "color:#666666; font-size: 16px; margin: 1em 0;",
+      "color:#009E5E; font-size: 16px; margin: 1em 0;",
+      "color:#666666; font-size: 16px; margin: 1em 0;");
+  </script>
+  
+  
+  
+
+  
+  <meta property="description" content="依晨">
+  
+
+  
+  <meta property="keywords" content="usage, docs">
+  
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <script async src="js/load-typekit.js"></script>
+<link rel="stylesheet" id="github-light" href="css/github-light.css">
+<link rel="stylesheet" id="github-dark" href="css/github-dark.css">
+<link rel="stylesheet" id="github-dark-orange" href="css/github-dark-orange.css">
+<link rel="stylesheet" id="dark-blue" href="css/dark-blue.css">
+<link rel="stylesheet" id="icy-dark" href="css/icy-dark.css">
+<link rel="stylesheet" id="photon-dark" href="css/photon-dark.css">
+
+<link async href="css/font-awesome.min.css" rel="stylesheet">
+<script language="javascript" type="text/javascript">
+	
+	<!--
+	
+	function key(){
+	
+	if(event.shiftKey){
+	
+	window.close();}
+	
+	//禁止shift
+	
+	if(event.altKey){
+	
+	window.close();}
+	
+	//禁止alt
+	
+	if(event.ctrlKey){
+	
+	window.close();}
+	
+	//禁止ctrl
+	
+	return false;}
+	
+	//document.onkeydown=key;
+	
+	if (window.Event)
+	
+	document.captureEvents(Event.MOUSEUP);
+	
+	//swordmaple javascript article.
+	
+	//from www.jx165.com
+	
+	function nocontextmenu(){
+	
+	event.cancelBubble = true
+	
+	event.returnValue = false;
+	
+	return false;}
+	
+	function norightclick(e){
+	
+	if (window.Event){
+	
+	if (e.which == 2 || e.which == 3)
+	
+	return false;}
+	
+	else
+	
+	if (event.button == 2 || event.button == 3){
+	
+	event.cancelBubble = true
+	
+	event.returnValue = false;
+	
+	return false;}
+	
+	}
+	
+	//禁止右键
+	
+	document.oncontextmenu = nocontextmenu; // for IE5+
+	
+	document.onmousedown = norightclick; // for all others
+	
+	//-->
+	
+	</script>
+</head>
+
+
+<body class="home">
+
+    
+
+<div class="index wrapper">
+    <main class="index">
+        <aside class="index">
+            <div id="logo">
+                <img src="https://q1.qlogo.cn/g?b=qq&nk=1419134059&s=100" alt="这是我的头像">
+
+                <div id="name">侞㕃.</div>
+            </div>
+            <ul id="info">
+                <li>
+                    <i class="fa-fw fa fa-user"></i>女
+                </li>
+                <li>
+                    <i class="fa-fw fa fa-telegram"></i>anqiqi
+                </li>
+                <li>
+                    <i class="fa-fw fa fa-qq"></i>1419134059
+                </li>
+                
+                <li>
+                    <i class="fa-fw fa fa-envelope-square"></i>1419134059@qq.com
+                </li>
+
+                <li>
+                    <i class="fa-fw fa fa-map-marker"></i>中国
+                </li>
+                <li>
+                    <i class="fa-fw fa fa-home"></i>贵州
+                </li>
+            </ul>
+        </aside>
+        <article class="index">
+            
+
+<h3 id="Hello-我是依晨">Hello，我是小琪。</h3>
+
+<p><ruby>“小乖你会怎样讲起我呢侃侃而谈还是郑重其事 ”<rt>Used since 2020, until now</rt><br>
+</ruby>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;年年有遗憾 年年又年年<br>
+你正使用 <ruby class="link"><button id="modeTag" onclick="mode()"></button><rt>mode</rt></ruby> 模式阅读。<br>
+未经他人苦，莫劝他人善！
+</p>
+
+        </article>
+    <p>BROOKS WAS HERE,SO WAS RED.</p>
+    <div id="chakhsu">
+    </div>
+    <script>
+       var chakhsu = function(r) {
+           function t() {
+               return b[Math.floor(Math.random() * b.length)]
+           }
+ 
+           function e() {
+               return String.fromCharCode(94 * Math.random() + 33)
+           }
+ 
+           function n(r) {
+               for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                   var l = document.createElement("span");
+                   l.textContent = e(),
+                       l.style.color = t(),
+                       n.appendChild(l)
+               }
+               return n
+           }
+ 
+           function i() {
+               var t = o[c.skillI];
+               c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")),
+                   r.textContent = c.text,
+                   r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))),
+                   setTimeout(i, d)
+           }
+           var l = "布鲁克斯曾经来过，",
+               o = ["“敌不动我不动 反正哥永远不主动 ”.", ].map(function(r) {
+                   return r + ""
+               }),
+               a = 2,
+               g = 1,
+               s = 5,
+               d = 75,
+               b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+               c = {
+                   text: "",
+                   prefixP: -s,
+                   skillI: 0,
+                   skillP: 0,
+                   direction: "forward",
+                   delay: a,
+                   step: g
+               };
+           i()
+       };
+       chakhsu(document.getElementById('chakhsu'));
+    </script>
+        <footer class="index">
+            
+            <script async src="js/give-up-IE.js"></script>
+            
+            <script async src="js/indentation-el.js"></script>
+            
+            <script async src="js/mode.js"></script>
+            
+            <script async src="js/beaudar.js"></script>
+            
+            <script async src="js/math-code.js"></script>
+            
+            <script async src="js/center-img.js"></script>
+
+            <script async src="js/Click.js"></script>
+            
+            <script async src="js/right-quote.js"></script>
+            
+            <script async src="js/fix-footnote.js"></script>
+            
+            <script async src="js/external-link.js"></script>
+            
+            <script async src="js/alt-title.js"></script>
+            
+            <script async src="js/header-link.js"></script>
+            
+            <script async src="js/checkbox-list.js"></script>
+             
+            <div class="copyright">
+                &copy;  2020 <a href="/">安琪琪</a>
+                <a class="travellings" href="#" target="_blank" rel="noopener noreferrer" title="笒鬼鬼">
+                </a>
+                <br>
+                
+                <span id="sitetime" style="font-size: 10px;font-weight: 700; "></span>
+                <script language="javascript">
+                    function siteTime() {
+                        window.setTimeout("siteTime()", 1000);
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        
+
+                        var t1 = Date.UTC(2022, 11, 05, 17, 50, 00); 
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+                        document.getElementById("sitetime").innerHTML = " 🚀已艰难运行" +   diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }  
+                    siteTime();
+                </script>
+                <br>
+                <div style="font-size: 10px; font-weight: 700;">
+                    <script async src="js/busuanzi.pure.mini.js">
+                    </script>
+                    🚩总访问量<span id="busuanzi_value_site_pv"></span>次 🏁访客数
+                    <span id="busuanzi_value_site_uv"></span>人次 🏳‍🌈总阅读量
+                    <span id="busuanzi_value_page_pv"></span>次
+                </div>
+                
+                <div style="font-size: 6px; font-weight: 700;">
+
+                </div>
+
+
+                
+            </div>
+            
+        </footer>
+    </main>
+</div>
+</body>
+
+</html>
